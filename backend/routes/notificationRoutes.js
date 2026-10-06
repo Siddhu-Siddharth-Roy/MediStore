@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const { param } = require('express-validator');
+const c = require('../controllers/notificationController');
+const auth = require('../middleware/authMiddleware');
+const validate = require('../middleware/validationMiddleware');
+router.use(auth);
+router.get('/', c.list);
+router.put('/read-all', c.markAllRead);
+router.put('/:id/read', [param('id').isInt({ min: 1 })], validate, c.markRead);
+module.exports = router;

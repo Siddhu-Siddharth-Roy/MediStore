@@ -1,0 +1,8 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Account – MediStore</title><link rel="stylesheet" href="css/style.css"></head>
+<body><main id="content" class="content">
+<div class="page-head"><h1 id="hello">Welcome</h1></div>
+<div class="tiles"><a class="card tile" href="medicines.html"><div class="num">💊</div><div class="lbl">Browse medicines</div></a><a class="card tile" href="my-orders.html"><div class="num" id="activeNum">…</div><div class="lbl">Orders in progress</div></a><a class="card tile" href="cart.html"><div class="num">🛒</div><div class="lbl">My cart</div></a><a class="card tile" href="profile.html"><div class="num">🙍</div><div class="lbl">My profile &amp; password</div></a></div>
+<div class="card"><h2>Recent orders</h2><div class="table-wrap"><table><thead><tr><th>Order</th><th>Placed</th><th>Total</th><th>Status</th><th></th></tr></thead><tbody id="recent"></tbody></table></div><p><a href="my-orders.html">View all orders →</a></p></div>
+</main><div id="toasts" aria-live="polite"></div>
+<script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/dashboard.js"></script></body></html>

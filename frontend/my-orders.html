@@ -1,0 +1,8 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My orders – MediStore</title><link rel="stylesheet" href="css/style.css"></head>
+<body><main id="content" class="content">
+<div class="page-head"><h1>My orders</h1></div>
+<div class="seg" role="group" aria-label="Filter"><button type="button" data-s="" aria-pressed="true">All</button><button type="button" data-s="active" aria-pressed="false">In progress</button><button type="button" data-s="Delivered" aria-pressed="false">Delivered</button><button type="button" data-s="Cancelled" aria-pressed="false">Cancelled</button></div>
+<div class="table-wrap"><table><thead><tr><th>Order</th><th>Placed</th><th>Items</th><th>Total</th><th>Status</th><th></th></tr></thead><tbody id="rows"></tbody></table></div><div class="pager" id="pager"></div>
+</main><div id="toasts" aria-live="polite"></div>
+<script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/my-orders.js"></script></body></html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Medicines – MediStore</title><link rel="stylesheet" href="css/style.css"></head>
+<body><main id="content" class="content">
+<div class="page-head"><h1>Medicines</h1><button id="addBtn">+ Add medicine</button></div>
+<div class="toolbar"><input id="q" class="grow" type="search" placeholder="Search name, generic or brand" aria-label="Search medicines">
+<select id="cat" aria-label="Filter by category"><option value="">All categories</option></select>
+<select id="mfr" aria-label="Filter by manufacturer"><option value="">All manufacturers</option></select>
+<select id="status" aria-label="Filter by status"><option value="">Any status</option><option value="active">Active</option><option value="inactive">Inactive</option></select>
+<select id="sort" aria-label="Sort"><option value="name|asc">Name A–Z</option><option value="name|desc">Name Z–A</option><option value="selling_price|asc">Price low–high</option><option value="selling_price|desc">Price high–low</option><option value="stock|asc">Stock low–high</option><option value="created_at|desc">Newest first</option></select></div>
+<div class="table-wrap"><table><thead><tr><th>Medicine</th><th>Category</th><th>Manufacturer</th><th>MRP</th><th>Price</th><th>Rx</th><th>Stock</th><th>Status</th><th>Actions</th></tr></thead><tbody id="rows"></tbody></table></div><div class="pager" id="pager"></div>
+</main><div id="toasts" aria-live="polite"></div>
+<script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/medicines-admin.js"></script></body></html>

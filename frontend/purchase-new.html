@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>New purchase – MediStore</title><link rel="stylesheet" href="css/style.css"></head>
+<body><main id="content" class="content">
+<div class="page-head"><h1 id="title">New purchase</h1><a href="admin-purchases.html" class="btn btn-ghost">← Purchases</a></div>
+<div id="problem" class="banner bad" hidden role="alert"></div>
+<form id="f" novalidate>
+<section class="card"><h2>Supplier &amp; invoice</h2><div class="grid2">
+<div><label for="supplier_id">Supplier *</label><select id="supplier_id" required></select><div class="field-error" data-err="supplier_id"></div></div>
+<div><label for="purchase_date">Purchase date</label><input id="purchase_date" type="date"><div class="field-error" data-err="purchase_date"></div></div>
+<div><label for="invoice_number">Supplier invoice no.</label><input id="invoice_number" maxlength="50"><div class="field-error" data-err="invoice_number"></div></div>
+<div><label for="notes">Notes</label><input id="notes" maxlength="500"><div class="field-error" data-err="notes"></div></div></div></section>
+<h2 style="margin:1.2rem 0 .6rem">Items</h2><div id="lines" aria-live="polite"></div>
+<p><button type="button" class="btn-ghost" id="addLine">+ Add item</button></p>
+<section class="card totalbar"><div>Total <span class="big" id="total">₹0.00</span> <span class="muted" id="units"></span></div>
+<div style="display:flex;gap:.5rem;flex-wrap:wrap"><button type="button" class="btn-ghost" id="draftBtn">Save as draft</button><button type="submit" id="confirmBtn">Confirm purchase &amp; add stock</button></div></section></form>
+</main><div id="toasts" aria-live="polite"></div>
+<script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/stock-forms.js"></script><script src="js/purchase-new.js"></script></body></html>

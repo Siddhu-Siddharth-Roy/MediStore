@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inventory – MediStore</title><link rel="stylesheet" href="css/style.css"></head>
+<body><main id="content" class="content">
+<div class="page-head"><h1>Inventory</h1><div><button id="addBtn">+ Add stock</button></div></div>
+<div class="tiles" id="tiles" aria-live="polite"></div>
+<div class="seg" role="group" aria-label="View"><button type="button" data-view="batches" aria-pressed="true">All batches</button><button type="button" data-view="low" aria-pressed="false">Low &amp; out of stock</button></div>
+<section id="batchesView"><div class="toolbar"><input id="q" class="grow" type="search" placeholder="Search medicine or batch number" aria-label="Search inventory">
+<select id="status" aria-label="Filter"><option value="">All batches</option><option value="in_stock">In stock</option><option value="low">Low stock</option><option value="out">Out of stock</option><option value="expiring">Expiring (≤ 90 days)</option><option value="expired">Expired (with stock)</option></select>
+<select id="sort" aria-label="Sort"><option value="expiry_date|asc">Expiry: soonest first</option><option value="expiry_date|desc">Expiry: latest first</option><option value="quantity|asc">Quantity: low–high</option><option value="medicine_name|asc">Medicine A–Z</option><option value="created_at|desc">Newest batches</option></select></div>
+<div class="table-wrap"><table><thead><tr><th>Medicine</th><th>Batch</th><th>Expiry</th><th>Qty</th><th>Reorder at</th><th>Cost / Price</th><th>Supplier</th><th>Actions</th></tr></thead><tbody id="rows"></tbody></table></div><div class="pager" id="pager"></div></section>
+<section id="lowView" hidden><p class="muted">Active medicines at or below their reorder level (expired units are not counted).</p><div class="table-wrap"><table><thead><tr><th>Medicine</th><th>Sellable units</th><th>Reorder level</th><th>Status</th><th>Actions</th></tr></thead><tbody id="lowRows"></tbody></table></div></section>
+</main><div id="toasts" aria-live="polite"></div>
+<script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/stock-forms.js"></script><script src="js/inventory.js"></script></body></html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Profile – MediStore</title><link rel="stylesheet" href="css/style.css"></head>
+<body><main id="content" class="content">
+<div class="page-head"><h1>My profile</h1></div>
+<div class="grid2" style="gap:1rem"><section class="card" aria-labelledby="h1p"><h2 id="h1p">Details</h2><form id="pf" novalidate>
+<label for="name">Name</label><input id="name" name="name" required maxlength="100"><div class="field-error" data-err="name"></div>
+<label for="email">Email</label><input id="email" name="email" type="email" required><div class="field-error" data-err="email"></div>
+<label for="phone">Phone</label><input id="phone" name="phone" type="tel"><div class="field-error" data-err="phone"></div>
+<p class="muted" id="meta"></p><button type="submit" style="margin-top:.6rem">Save changes</button></form></section>
+<section class="card" aria-labelledby="h2p"><h2 id="h2p">Change password</h2><form id="pw" novalidate>
+<label for="cur">Current password</label><input id="cur" name="current_password" type="password" autocomplete="current-password" required><div class="field-error" data-err="current_password"></div>
+<label for="new">New password (8+ chars, include a number)</label><input id="new" name="new_password" type="password" autocomplete="new-password" required><div class="field-error" data-err="new_password"></div>
+<button type="submit" style="margin-top:1rem">Change password</button></form></section></div>
+</main><div id="toasts" aria-live="polite"></div>
+<script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/profile.js"></script></body></html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkout – MediStore</title><link rel="stylesheet" href="css/style.css"></head>
+<body><main id="content" class="content">
+<div class="page-head"><h1>Checkout</h1><a href="cart.html" class="btn btn-ghost">← Back to cart</a></div>
+<div id="problem" class="banner bad" hidden role="alert"></div>
+<div class="cart-grid"><form class="card" id="f" novalidate><h2>Delivery details</h2>
+<label for="name">Name</label><input id="name" readonly>
+<label for="delivery_phone">Contact phone *</label><input id="delivery_phone" name="delivery_phone" type="tel" required autocomplete="tel"><div class="field-error" data-err="delivery_phone"></div>
+<label for="delivery_address">Delivery address *</label><textarea id="delivery_address" name="delivery_address" required maxlength="500" autocomplete="street-address" placeholder="House no., street, area, city, PIN"></textarea><div class="field-error" data-err="delivery_address"></div>
+<label for="notes">Delivery notes (optional)</label><input id="notes" name="notes" maxlength="500" placeholder="e.g. call before arriving"><div class="field-error" data-err="notes"></div>
+<div id="rxBox" hidden class="banner warn" style="margin-top:1rem"><label style="display:flex;gap:.5rem;align-items:flex-start;margin:0;font-weight:400"><input type="checkbox" id="rx"><span>I confirm I hold a valid prescription for the prescription medicines in this order and will show it on delivery.</span></label><div class="field-error" data-err="prescription_confirmed"></div></div>
+<p class="muted">Payment: cash on delivery.</p><div class="msg error" id="msg" role="alert"></div><button type="submit" id="placeBtn">Place order</button></form>
+<aside class="card" id="summary" aria-label="Order summary">Loading…</aside></div>
+</main><div id="toasts" aria-live="polite"></div>
+<script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/checkout.js"></script></body></html>

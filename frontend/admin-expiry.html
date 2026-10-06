@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Expiry management – MediStore</title><link rel="stylesheet" href="css/style.css"></head>
+<body><main id="content" class="content">
+<div class="page-head"><h1>Expiry management</h1><div><button class="btn-ghost" id="syncBtn">Refresh alerts</button> <button class="btn-danger" id="writeOffBtn" hidden>Write off all expired</button></div></div>
+<div class="seg" role="group" aria-label="Expiry window"><button type="button" data-w="expired" aria-pressed="true">Expired</button><button type="button" data-w="30" aria-pressed="false">Within 30 days</button><button type="button" data-w="60" aria-pressed="false">Within 60 days</button><button type="button" data-w="90" aria-pressed="false">Within 90 days</button></div>
+<div class="note" id="totals" aria-live="polite"></div>
+<div class="table-wrap"><table><thead><tr><th>Medicine</th><th>Batch</th><th>Expiry date</th><th>Status</th><th>Qty</th><th>Value at cost</th><th>Actions</th></tr></thead><tbody id="rows"></tbody></table></div><div class="pager" id="pager"></div>
+</main><div id="toasts" aria-live="polite"></div>
+<script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/stock-forms.js"></script><script src="js/expiry.js"></script></body></html>

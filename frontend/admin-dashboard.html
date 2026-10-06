@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard – MediStore</title><link rel="stylesheet" href="css/style.css"></head>
+<body><main id="content" class="content">
+<div class="page-head"><h1 id="hello">Dashboard</h1><button class="btn-ghost btn-sm" id="refresh">↻ Refresh</button></div>
+<div id="error" class="banner bad" hidden role="alert"></div>
+<section class="dash-cards" id="cards" aria-label="Key figures" aria-live="polite"></section>
+
+<div class="grid-2">
+  <section class="card"><div class="chart-head"><h2>Sales</h2><div class="seg" role="group" aria-label="Sales period"><button type="button" data-p="daily" aria-pressed="true">30 days</button><button type="button" data-p="monthly" aria-pressed="false">12 months</button></div></div><div class="chart-box" id="salesChart"></div></section>
+  <section class="card"><div class="chart-head"><h2>Top-selling medicines</h2><span class="muted" id="topPeriod"></span></div><div class="chart-box" id="topChart"></div></section>
+</div>
+<div class="grid-2">
+  <section class="card"><div class="chart-head"><h2>Medicines by category</h2></div><div class="chart-box" id="catChart"></div></section>
+  <section class="card"><div class="chart-head"><h2>Inventory status</h2><span class="muted">by batch</span></div><div class="chart-box" id="statusChart"></div></section>
+</div>
+
+<div class="grid-2">
+  <section class="card"><h2>Sales summary</h2><dl class="kv" id="salesSummary"></dl><p class="muted" style="margin-bottom:0">Sales count every order that was not cancelled.</p></section>
+  <section class="card"><h2>Inventory summary</h2><dl class="kv" id="invSummary"></dl></section>
+</div>
+
+<div class="grid-2">
+  <section class="card"><div class="chart-head"><h2>Recent orders</h2><a href="admin-orders.html">All orders →</a></div><div class="table-wrap"><table class="mini-table"><thead><tr><th>Order</th><th>Customer</th><th>Total</th><th>Status</th></tr></thead><tbody id="recentOrders"></tbody></table></div></section>
+  <section class="card"><div class="chart-head"><h2>Recent purchases</h2><a href="admin-purchases.html">All purchases →</a></div><div class="table-wrap"><table class="mini-table"><thead><tr><th>Purchase</th><th>Supplier</th><th>Total</th><th>Status</th></tr></thead><tbody id="recentPurchases"></tbody></table></div></section>
+</div>
+<div class="grid-3">
+  <section class="card"><div class="chart-head"><h2>Low stock</h2><a href="admin-inventory.html">Inventory →</a></div><div class="table-wrap"><table class="mini-table"><thead><tr><th>Medicine</th><th>Units</th><th>Status</th></tr></thead><tbody id="lowStock"></tbody></table></div></section>
+  <section class="card"><div class="chart-head"><h2>Expiring / expired</h2><a href="admin-expiry.html">Expiry →</a></div><div class="table-wrap"><table class="mini-table"><thead><tr><th>Medicine</th><th>Expiry</th><th>Units</th></tr></thead><tbody id="expiring"></tbody></table></div></section>
+  <section class="card"><div class="chart-head"><h2>Recent notifications</h2><a href="notifications.html">All →</a></div><ul class="np-list" id="recentNotifs" style="border:1px solid var(--line);border-radius:8px"></ul></section>
+</div>
+</main><div id="toasts" aria-live="polite"></div>
+<script src="js/api.js"></script><script src="js/ui.js"></script><script src="vendor/chart.js/chart.umd.min.js"></script><script src="js/charts.js"></script><script src="js/admin-dashboard.js"></script></body></html>

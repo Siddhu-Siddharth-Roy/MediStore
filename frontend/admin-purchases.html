@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Purchases – MediStore</title><link rel="stylesheet" href="css/style.css"></head>
+<body><main id="content" class="content">
+<div class="page-head"><h1>Purchases</h1><a class="btn" href="purchase-new.html">+ New purchase</a></div>
+<div class="toolbar"><input id="q" class="grow" type="search" placeholder="Purchase #, supplier or invoice number" aria-label="Search purchases">
+<select id="supplier" aria-label="Filter by supplier"><option value="">All suppliers</option></select>
+<select id="status" aria-label="Filter by status"><option value="">All statuses</option><option>Draft</option><option>Confirmed</option><option>Cancelled</option></select>
+<div><label class="sr-only" for="from">From</label><input id="from" type="date" title="From date"></div><div><label class="sr-only" for="to">To</label><input id="to" type="date" title="To date"></div></div>
+<div class="table-wrap"><table><thead><tr><th>Purchase</th><th>Date</th><th>Supplier</th><th>Invoice</th><th>Items</th><th>Total</th><th>Status</th><th></th></tr></thead><tbody id="rows"></tbody></table></div><div class="pager" id="pager"></div>
+</main><div id="toasts" aria-live="polite"></div>
+<script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/stock-forms.js"></script><script src="js/admin-purchases.js"></script></body></html>

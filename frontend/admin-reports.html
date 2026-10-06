@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reports – MediStore</title><link rel="stylesheet" href="css/style.css"></head>
+<body><main id="content" class="content">
+<div class="page-head"><h1>Reports</h1><div class="no-print"><button class="btn-ghost" id="printBtn">🖨 Print</button> <a class="btn" id="csvBtn" href="#" download>⬇ Download CSV</a></div></div>
+<div class="seg" role="group" aria-label="Report type">
+  <button type="button" data-t="sales" aria-pressed="true">Sales</button><button type="button" data-t="purchases" aria-pressed="false">Purchases</button><button type="button" data-t="inventory" aria-pressed="false">Stock valuation</button>
+  <button type="button" data-t="expiry" aria-pressed="false">Expiry</button><button type="button" data-t="low-stock" aria-pressed="false">Low stock</button></div>
+<form class="filters card" id="filters" novalidate aria-label="Report filters"></form>
+<div id="error" class="banner bad" hidden role="alert"></div>
+<h2 id="title" aria-live="polite"></h2><p class="report-note" id="note"></p>
+<div class="table-wrap"><table><thead id="head"></thead><tbody id="body"></tbody><tfoot id="foot"></tfoot></table></div>
+</main><div id="toasts" aria-live="polite"></div>
+<script src="js/api.js"></script><script src="js/ui.js"></script><script src="js/stock-forms.js"></script><script src="js/admin-reports.js"></script></body></html>
